@@ -1,0 +1,27 @@
+<nav class="navbar header1" >
+    <div class="container">
+      <div class="navbar-header col-sm-7">
+        <a class="navbar-brand" href="#">Help
+            <i class="glyphicon glyphicon-phone" aria-hidden="true"></i>+91 7400462718
+        </a>
+      </div>
+      <ul class="nav navbar-nav">
+          <li><a [routerLink]="['purohith']" href="#">Register as purohith</a></li>
+           
+        <li><a [routerLink]="['login']" href="#" *ngIf="!isuservalid">Login</a></li>
+        <li><a [routerLink]="['register']" href="#" *ngIf="!isuservalid">Register</a></li>
+        <li class="dropdown"  *ngIf="isuservalid" >
+            <a [routerLink]="['myorders']" class="dropdown-toggle" data-toggle="dropdown" href="#" >My Profile
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                
+              <li><a [routerLink]="['updateProfile']" href="#">Update Profile</a></li>
+              <li><a [routerLink]="['myOrders']" href="#">My Orders</a></li>
+              <li><a [routerLink]="['changePassword']" href="#">Change Password</a></li>
+              <li><a href="#" (click)="logoutclick()" >Logout</a></li>
+             
+            </ul>
+          </li>      
+      </ul>
+    </div>
+  </nav>
